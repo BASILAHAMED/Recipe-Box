@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Management System</title>
+</head>
+<body>
+    <!-- <h1>Recipe Management System</h1>
+    <h2>Recipes</h2> -->
+    <body style="background-color: #8cbbc2; font-family: Arial, sans-serif;">
+
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+        <h1 style="color: #333333; text-align: center;">Welcome to Recipe Management System</h1>
+        <p style="color: #000000; text-align: center; font-size: 18px;">Manage and store your favorite recipes</p>
+    <ul>
+        {% for recipe in recipes %}
+        <li>
+            <a href="/recipe/{{ recipe.id }}">{{ recipe.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/recipe/add">Add Recipe</a>
+</body>
+</html>
